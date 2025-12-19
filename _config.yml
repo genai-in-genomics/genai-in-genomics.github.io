@@ -1,0 +1,19 @@
+# Jekyll configuration for GitHub Pages
+# This enables Jekyll processing for the site
+
+# Site settings
+title: "Generative AI in Genomics (Gen^2) Workshop"
+description: "ICLR 2026 Workshop on Generative AI in Genomics"
+baseurl: "" # Leave empty for user/organization GitHub Pages sites
+url: "https://genai4genomics.github.io"
+
+# Build settings
+markdown: kramdown
+
+# Exclude files from processing
+exclude:
+  - README.md
+  - LICENSE.txt
+  - .DS_Store
+  - .git
+  - .gitignore

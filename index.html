@@ -1,3 +1,7 @@
+---
+layout: none
+active_page: home
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,31 +21,7 @@
     /* General Styles */
     body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
 
-    /* Header & Navigation */
-    .back {
-      background:
-        linear-gradient(rgba(30, 100, 160, 0.90), rgba(0, 0, 0, 0.01)),
-        url("img/rio_gemini_image.png") no-repeat center;
-      background-size: cover;
-      padding-bottom: 100px;
-    }
-    .back h1, .back h2, .back h3 { color: white; }
-    .back h2 { font-family: "Lato", sans-serif; font-weight: 500; font-size: 3rem; }
-    .nav .btn { font-size: 30px; color: white; }
-    .nav a.active { text-decoration: underline; }
-    .dropdown { position: relative; display: inline-block; }
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #f9f9f9;
-      min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      z-index: 1;
-    }
-    .dropdown-content a { color: black; padding: 12px 16px; text-decoration: none; display: block; }
-    .dropdown-content a:hover { background-color: #f1f1f1; }
-    .dropdown:hover .dropdown-content { display: block; }
-
+    
     /* Profile Cards for Speakers & Organizers */
     .profile-card {
       text-align: center;
@@ -125,35 +105,7 @@
 </head>
 
 <body>
-  <div class="jumbotron jumbotron-fluid back">
-    <div class="row header p-6 m-5">
-      <div class="p-1 mx-auto text-center text-white col-md-20 col-sm-12">
-        <h1>Generative AI in Genomics (Gen^2): Barriers and Frontiers</h1>
-        <h2> ICLR 2026 Workshop | April 26-27 | Room TBD </h2>
-        <h3>Contact: genai-in-genomics@googlegroups.com</h3>
-        <br>
-        <div class="nav">
-            <a href="index.html" class="btn active">Home</a>
-            <a href="call_for_papers.html" class="btn">Call for Papers</a>
-            <a href="schedule.html" class="btn">Schedule</a>
-            <a href="faq.html" class="btn">FAQ</a>
-            <!-- <div class="dropdown">
-                <a href="#" class="btn">Prior Years</a>
-                <div class="dropdown-content">
-                    <a href="iclr2024/index.html">ICLR 2024</a>
-                    <a href="neurips2022/index.html">NeurIPS 2022</a>
-                </div>
-            </div> -->
-            <!-- <div class="dropdown">
-                <a href="#" class="btn">Coming Soon</a>
-                <div class="dropdown-content">
-                    <a href="iclr2026/index.html">ICLR 2026</a>
-                </div>
-            </div> -->
-        </div>
-      </div>
-    </div>
-  </div>
+  {% include header.html %}
 
   <div class="container">
     <div class="row">
@@ -174,20 +126,22 @@
                 <hr>
 
                 <p>
-                  Description
+                Generative AI is rapidly transforming genomics, enabling breakthroughs in tasks such as DNA sequence design, protein structure prediction, and gene expression modeling. However, significant challenges remain in addressing the unique complexities of genomic data, including its high dimensionality, sparsity, and inherent biological variability. This workshop aims to explore the current state of generative AI in genomics, identify key barriers to progress, and chart a path forward for advancing the field.
                 </p>
-                 <!-- <img src="img/ts4h.png" alt="Banner illustrating various types of health time-series data" style="display: block; margin-left: auto; margin-right: auto; width: 65%; border-radius: 8px; margin-bottom: 15px;margin-top: 15px;">                               
-                <p>                                                                                        
-                Our TS4H workshop unites researchers across health time-series domains (from wearables to clinical systems) to address shared challenges through: (1) cross-domain discussion, (2) diverse industry/academic perspectives (featuring Google, Oura, Apple and 5 institutions), and (3) community engagement via posters, talks, and panels. By fostering cross-domain collaboration on physiological-aware methods, we aim to bridge the gap between cutting-edge ML and real-world healthcare impact.
-                </p> -->
+                <p>
+                By bringing together researchers from machine learning, computational biology, and genomics, this workshop seeks to foster interdisciplinary collaboration and innovation. We will discuss how generative models can be adapted to meet the specific needs of genomic applications, address ethical and interpretability concerns, and ultimately accelerate discoveries that improve human health and our understanding of life.
+                </p>
 
                 <hr>
                 <div style="text-align: center; font-size: 1em; padding: 1em;">
-                <p>To recognize an outstanding contribution, we are pleased to offer a <strong>$500 Best Paper Prize</strong>🏆 sponsored independently by <strong>Google and Apple</strong></p>
-                <a href="https://openreview.net/group?id=NeurIPS.cc/2025/Workshop/TS4H#tab-accept" class="btn btn-primary" style="margin-top: 10px;">View Accepted Papers</a>
+                <a href="https://openreview.net/group?id=ICLR.cc/2026/Workshop/Gen2" class="btn btn-primary" style="margin-top: 10px;">Submit Your Paper</a>
 
                 </div>
             </section>
+
+
+
+            <!-- SPEAKERS -->
 
             <section id="speakers">
                 <h2><a name="speakers"></a>Speakers</h2>
@@ -195,7 +149,7 @@
                 <div class="row profile-row">
                     <div class="col-sm-6 col-md-4">
                         <div class="profile-card">
-                        <a href="https://emilybfox.su.domains/">
+                        <a href="https://www.stemcells.cam.ac.uk/people/pi/teichmann">
                             <img src="img/sarah.png" class="profile-image">
                             <div class="profile-name">Sarah Teichmann, PhD</div>
                             <div class="profile-affiliation">Professor at University of Cambridge</div>
@@ -204,7 +158,7 @@
                     </div>
                     <div class="col-sm-6 col-md-4">
                         <div class="profile-card">
-                        <a href="https://goldenberglab.ca/index.html">
+                        <a href="https://people.epfl.ch/maria.brbic">
                             <img src="img/maria.png" class="profile-image">
                             <div class="profile-name">Maria Brbic, PhD</div>
                             <div class="profile-affiliation">Assistant Professor at EPFL</div>
@@ -213,82 +167,49 @@
                     </div>
                     <div class="col-sm-6 col-md-4">
                         <div class="profile-card">
-                        <a href="https://scholar.google.com/citations?user=m7Jr-b4AAAAJ&hl=en">
-                            <img src="img/nic.jpeg" class="profile-image">
+                        <a href="https://njw.fish/">
+                            <img src="img/nic.png" class="profile-image">
                             <div class="profile-name">Nic Fishman, PhD</div>
                             <div class="profile-affiliation">Ph.D. student at Harvard University</div>
                         </a>
                         </div>
                     </div>
-  <!--                   <div class="col-sm-6 col-md-4">
-                        <div class="profile-card">
-                        <a href="https://www.dbmi.columbia.edu/profile/matthew-mcdermott/">
-                            <img src="img/mathew.jpg" class="profile-image">
-                            <div class="profile-name">Matthew McDermott, PhD</div>
-                            <div class="profile-affiliation">Assistant Professor at Columbia</div>
-                        </a>
-                        </div>
-                    </div> -->
-                    <!-- <div class="col-sm-6 col-md-4">
-                        <div class="profile-card">
-                        <a href="https://mp2893.com/">
-                            <img src="img/edward.jpeg" class="profile-image">
-                            <div class="profile-name">Edward Choi, PhD</div>
-                            <div class="profile-affiliation">Associate Professor at KAIST</div>
-                        </a>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4">
-                        <div class="profile-card">
-                        <a href="https://www.linkedin.com/in/jaya-narain-5b6b0963/">
-                            <img src="img/jaya.jpeg" class="profile-image">
-                            <div class="profile-name">Jaya Narain, PhD</div>
-                            <div class="profile-affiliation">Research Scientist at Apple</div>
-                        </a>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4">
-                        <div class="profile-card">
-                        <a href="https://ouraring.com/blog/reviewed-by/xi-zhang-phd-vp-health-sensing/?srsltid=AfmBOorCIHhfkyuha_O_e_shOCb9rsJpOAJyFMx-znTbv6Ef2yKJwCwo">
-                            <img src="img/xi.png" class="profile-image">
-                            <div class="profile-name">Xi Zhang, PhD</div>
-                            <div class="profile-affiliation">VP of Health Sensing at Oura</div>
-                        </a>
-                        </div>
-                    </div> -->
+
                 </div>
             </section>
             
+            <!-- ORGANIZERS -->
             <section id="organizers">
                 <h2><a name="organizers"></a>Organizers</h2>
+
+
+                <!-- MAIN ORGANIZING COMMITTEE -->
                 <hr>
                 <h3 class="committee-title">Primary Committee</h3>
                 <div class="row profile-row">
 
-                    <div class="col-sm-6 col-md-3"><div class="profile-card"><a href="https://tamarabroderick.com/"><img src="img/tamara.jpg" class="profile-image"><div class="profile-name">Tamara Broderick, PhD</div><div class="profile-affiliation">MIT, Professor</div></a></div></div>
+                    <div class="col-sm-6 col-md-3"><div class="profile-card"><a href="https://tamarabroderick.com/"><img src="img/tamara.png" class="profile-image"><div class="profile-name">Tamara Broderick, PhD</div><div class="profile-affiliation">MIT, Professor</div></a></div></div>
                     <div class="col-sm-6 col-md-3"><div class="profile-card"><a href="https://vdeborto.github.io/"><img src="img/valentin.png" class="profile-image"><div class="profile-name">Valentin De Bortoli, PhD</div><div class="profile-affiliation">Google DeepMind, Research Scientist</div></a></div></div>
-                    <div class="col-sm-6 col-md-3"><div class="profile-card"><a href="https://pinardemetci.github.io/"><img src="img/pinar.jpeg" class="profile-image"><div class="profile-name">Pinar Demetci, PhD</div><div class="profile-affiliation">Broad Institute of MIT and Harvard, Postdoctoral Fellow</div></a></div></div>
-                    <div class="col-sm-6 col-md-3"><div class="profile-card"><a href="https://www.stats.ox.ac.uk/~doucet/"><img src="img/arnaud.jpeg" class="profile-image"><div class="profile-name">Arnaud Doucet, PhD</div><div class="profile-affiliation">Google DeepMind, Senior Staff Research Scientist</div></a></div></div>
-                    <div class="col-sm-6 col-md-3"><div class="profile-card"><a href="https://www.linkedin.com/in/dongshunyili/"><img src="img/dora.jpeg" class="profile-image"><div class="profile-name">Dongshunyi "Dora" Li, PhD</div><div class="profile-affiliation">Broad Institute of MIT and Harvard, Postdoctoral Fellow</div></a></div></div>
-                    <div class="col-sm-6 col-md-3"><div class="profile-card"><a href="https://scholar.google.com/citations?user=Lkm90i8AAAAJ&hl=en"><img src="img/maria.jpg" class="profile-image"><div class="profile-name">Maria Skoularidou, PhD</div><div class="profile-affiliation">Broad Institute of MIT and Harvard, Postdoctoral Fellow</div></a></div></div>
-                    <div class="col-sm-6 col-md-3"><div class="profile-card"><a href="https://rsoatto.github.io/"><img src="img/renzo.jpg" class="profile-image"><div class="profile-name">Renzo Soatto</div><div class="profile-affiliation">MIT, Ph.D. student</div></a></div></div>
-                    <div class="col-sm-6 col-md-3"><div class="profile-card"><a href="https://en.wikipedia.org/wiki/Max_Welling"><img src="img/max.jpg" class="profile-image"><div class="profile-name">Max Welling, PhD</div><div class="profile-affiliation">TBD</div></a></div></div>
-                    
+                    <div class="col-sm-6 col-md-3"><div class="profile-card"><a href="https://pinardemetci.github.io/"><img src="img/pinar.png" class="profile-image"><div class="profile-name">Pinar Demetci, PhD</div><div class="profile-affiliation">Broad Institute of MIT and Harvard, Postdoctoral Fellow</div></a></div></div>
+                    <div class="col-sm-6 col-md-3"><div class="profile-card"><a href="https://www.stats.ox.ac.uk/~doucet/"><img src="img/arnaud.png" class="profile-image"><div class="profile-name">Arnaud Doucet, PhD</div><div class="profile-affiliation">Google DeepMind, Senior Staff Research Scientist</div></a></div></div>
+                    <div class="col-sm-6 col-md-3"><div class="profile-card"><a href="https://www.linkedin.com/in/dongshunyili/"><img src="img/dora.png" class="profile-image"><div class="profile-name">Dongshunyi "Dora" Li, PhD</div><div class="profile-affiliation">Broad Institute of MIT and Harvard, Postdoctoral Fellow</div></a></div></div>
+                    <div class="col-sm-6 col-md-3"><div class="profile-card"><a href="https://scholar.google.com/citations?user=Lkm90i8AAAAJ&hl=en"><img src="img/marias.png" class="profile-image"><div class="profile-name">Maria Skoularidou, PhD</div><div class="profile-affiliation">Broad Institute of MIT and Harvard, Postdoctoral Fellow</div></a></div></div>
+                    <div class="col-sm-6 col-md-3"><div class="profile-card"><a href="https://rsoatto.github.io/"><img src="img/renzo.png" class="profile-image"><div class="profile-name">Renzo Soatto</div><div class="profile-affiliation">MIT, Ph.D. student</div></a></div></div>
+                    <div class="col-sm-6 col-md-3"><div class="profile-card"><a href="https://en.wikipedia.org/wiki/Max_Welling"><img src="img/max.png" class="profile-image"><div class="profile-name">Max Welling, PhD</div><div class="profile-affiliation">TBD</div></a></div></div>
+
                 </div>
+
+
+                <!-- ADVISORS -->
                 
                 <h3 class="committee-title">Advisory Committee</h3>
                 <div class="row profile-row">
 
-<!--                     <div class="col-sm-6 col-md-3"><div class="profile-card"><a href="https://tamarabroderick.com/"><img src="img/tamara.jpg" class="profile-image"><div class="profile-name">Tamara Broderick, PhD</div><div class="profile-affiliation">MIT, Professor</div></a></div></div>
-                    <div class="col-sm-6 col-md-3"><div class="profile-card"><a href="https://vdeborto.github.io/"><img src="img/valentin.png" class="profile-image"><div class="profile-name">Valentin De Bortoli, PhD</div><div class="profile-affiliation">Google DeepMind, Research Scientist</div></a></div></div>
-                    <div class="col-sm-6 col-md-3"><div class="profile-card"><a href="https://pinardemetci.github.io/"><img src="img/pinar.jpeg" class="profile-image"><div class="profile-name">Pinar Demetci, PhD</div><div class="profile-affiliation">Broad Institute of MIT and Harvard, Postdoctoral Fellow</div></a></div></div>
-                    <div class="col-sm-6 col-md-3"><div class="profile-card"><a href="https://www.stats.ox.ac.uk/~doucet/"><img src="img/arnaud.jpeg" class="profile-image"><div class="profile-name">Arnaud Doucet, PhD</div><div class="profile-affiliation">Google DeepMind, Senior Staff Research Scientist</div></a></div></div>
-                    <div class="col-sm-6 col-md-3"><div class="profile-card"><a href="https://www.linkedin.com/in/dongshunyili/"><img src="img/dora.jpeg" class="profile-image"><div class="profile-name">Dongshunyi "Dora" Li, PhD</div><div class="profile-affiliation">Broad Institute of MIT and Harvard, Postdoctoral Fellow</div></a></div></div>
-                    <div class="col-sm-6 col-md-3"><div class="profile-card"><a href="https://scholar.google.com/citations?user=Lkm90i8AAAAJ&hl=en"><img src="img/maria.jpg" class="profile-image"><div class="profile-name">Maria Skoularidou, PhD</div><div class="profile-affiliation">Broad Institute of MIT and Harvard, Postdoctoral Fellow</div></a></div></div>
-                    <div class="col-sm-6 col-md-3"><div class="profile-card"><a href="https://rsoatto.github.io/"><img src="img/renzo.jpg" class="profile-image"><div class="profile-name">Renzo Soatto</div><div class="profile-affiliation">MIT, Ph.D. student</div></a></div></div>
-                    <div class="col-sm-6 col-md-3"><div class="profile-card"><a href="https://en.wikipedia.org/wiki/Max_Welling"><img src="img/max.jpg" class="profile-image"><div class="profile-name">Max Welling, PhD</div><div class="profile-affiliation">TBD</div></a></div></div> -->
                 </div>
             </section>
+
+
+            <!-- SPONSORS -->
             <h1><a name="sponsor-title"></a>Sponsors</h1> <hr>
             <section id="sponsors" class="row">    
                 <h2 class="committee-title">Gold Level</h3>
@@ -297,11 +218,15 @@
                     <img src="img/apple-logo.png" alt="Apple Logo" class="sponsor-logo-footer">
                 </div>
             </section>
+
+
         </div>
     </div>
     <hr>
   </div>
 
+
+<!-- FOOTER & GOOGLE APIS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
   <script type="text/x-mathjax-config">

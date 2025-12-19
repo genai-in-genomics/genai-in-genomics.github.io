@@ -1,3 +1,7 @@
+---
+layout: none
+active_page: cfp
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,99 +19,7 @@
 
   </head>
 <body>
-  <style>
-    .back {
-      background:
-        linear-gradient(
-          rgba(30, 100, 160, 0.90),
-          rgba(0, 0, 0, 0.01)
-        ),
-        url("img/rio_gemini_image.png") no-repeat center;
-      background-size: cover;
-    }
-    .back h2 {
-      font-family: "Lato", sans-serif;
-      font-weight: 500;
-      font-size: 3rem;
-    }
-    .helper {
-      display: inline-block;
-      height: 100%;
-      vertical-align: middle;
-    }
-    .nav .btn {
-      font-size: 30px; 
-      color: white;
-    }
-    /* Style for the active navigation link */
-    .nav a.active {
-      text-decoration: underline;
-    }
-  </style>
-<div class="jumbotron jumbotron-fluid back" style="padding-bottom: 100px;">
-  <div class="row header p-6 m-5">
-    <div class="p-1 mx-auto text-center text-white col-md-20 col-sm-12">
-      <h1 style="color:white;">
-        Learning from Time Series for Health
-      </h1>
-      <h2 style="color:white;">
-       NeurIPS 2025 Workshop | December 7 | Room 28 A-E
-      </h2>
-      <h3 style="color:white;">
-        Contact: ts4h.chairs@gmail.com
-      </h3>
-      <br>
-      <div class="nav">
-        <a href="index.html" class="btn">Home</a>
-        <a href="call_for_papers.html" class="btn active">Call for Papers</a>
-        <a href="schedule.html" class="btn">Schedule</a>
-        <style>
-          .dropdown {
-            position: relative;
-            display: inline-block;
-          }
-          
-          .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-          }
-          
-          .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-          }
-          
-          .dropdown-content a:hover {
-            background-color: #f1f1f1;
-          }
-          
-          .dropdown:hover .dropdown-content {
-            display: block;
-          }
-        </style>
-        <div class="dropdown" style="display:inline-block;">
-          <a href="#" class="btn">Prior Years</a>
-          <div class="dropdown-content">
-              <a href="iclr2024/index.html">ICLR 2024</a>
-              <a href="neurips2022/index.html">NeurIPS 2022</a>
-          </div>
-        </div>
-        <!-- <div class="dropdown" style="display:inline-block;">
-          <a href="#" class="btn">Coming Soon</a>
-          <div class="dropdown-content">
-              <a href="iclr2026/index.html">ICLR 2026</a>
-          </div>
-        </div> -->
-      </div>
-    </div>
-  </div>
-</div>
+{% include header.html %}
 
 <div class="container">
   <div class="row" style="padding:20px">
