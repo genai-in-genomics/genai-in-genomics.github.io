@@ -21,168 +21,265 @@ active_page: cfp
 <body>
 {% include header.html %}
 
-<div class="container">
-  <div class="row" style="padding:20px">
-    <div class="hidden-xs col-sm-3 col-md-2" id="sidebar" role="navigation" style="margin-top:10px">
+  <div class="container">
+    <div class="row" style="padding:20px">
+
+      <!-- Left sidebar (kept from template, now populated) -->
+      <div class="hidden-xs col-sm-3 col-md-2" id="sidebar" role="navigation" style="margin-top:10px">
+        <div class="section-nav" style="font-size:16px;">
+          <strong>On this page</strong>
+          <hr style="margin:10px 0;">
+          <a href="#call">Call for Papers</a>
+          <a href="#dates">Key Dates</a>
+          <a href="#topics">Topics of Interest</a>
+          <a href="#submit">Submission Instructions</a>
+          <a href="#originality">Originality</a>
+          <a href="#review">Review Process</a>
+          <a href="#llm">Use of LLMs</a>
+          <a href="#presentation">Presentation</a>
+          <a href="#templates">Templates & Submission</a>
+          <a href="#faq">FAQ</a>
+        </div>
       </div>
 
-    <div class="col-xs-12 col-sm-9 col-md-9">
+      <!-- Main content -->
+      <div class="col-xs-12 col-sm-9 col-md-9">
 
-    <div class="row" style="font-size:18px">
-        <h2><a name="call-for-papers"></a>Call for Papers</h2>
-        <hr>
-        <div style="text-align: left; font-size: 1.5em; padding: 0 1em;">
-            <!-- <p><strong>September 1, 2025 Recent News: </strong></p>
-            <p>Due to <a href="https://updownradar.com/status/openreview.net" style="color:#005599">systematic OpenReview issues</a>, we are extending the deadline to September 2, 2025 AOE. We have messaged OpenReview to ask them when it can be brought back online. </p> -->
-          <p><strong>📢 Camera-Ready Submission Deadline</strong></p>
+        <!-- Call for Papers -->
+        <div class="row" style="font-size:18px">
+          <h2 id="call">Call for Papers</h2>
+          <hr>
           <p>
-            The camera-ready deadline for accepted papers is <strong>November 23, 2025 (Anywhere on Earth)</strong>. Please make sure to upload your final version by this date. If you have any questions or encounter issues during submission, feel free to reach out to the organizing team.
+            Introduction: Gen<sup>2</sup> is designed to sharply focus on domain-specific roadblocks and open challenges
+            that must be addressed to accelerate the impact of GenAI in genomics.
           </p>
         </div>
-        <br>
-        
-        <p>
-          The Learning from Time Series for Health (TS4H) workshop is returning to NeurIPS 2025, and invites submissions focused on the unique challenges and opportunities in modeling time series data to better understand and improve human health.
-          Time series data is ubiquitous in modern healthcare, spanning diverse modalities such as wearables, sensors, medical waveforms, and electronic health records. This workshop brings together researchers working across methodological and applied areas to address questions unique to the intersection of time series analysis and health.
-        </p>
-        <div style="text-align: left; font-size: 1em; padding-top: 1em;">
-            <p>We invite you to submit your work by <del>August 22, 2025</del> <strong>September 1, 2025</strong> (Anywhere on Earth).</p>
-            <p>To recognize an outstanding contribution, we are pleased to offer a <strong>$500 Best Paper Prize</strong> 🏆 sponsored independently by <strong>Google and Apple</strong></p>
-        </div>
-        
-        <!-- === MODIFICATIONS START HERE === -->
-<!--         <br>
-        <h4>NEW UPDATE: ML4H-to-TS4H Track</h4>
-        <p>
-          In addition to our 4-page main submission below, we are also offering a ML4H-to-TS4H Cross-submission Track. For those that wish to submit full length, 9-page-long papers, we encourage authors to submit their works to ML4H and choose the TS4H cross-submission option. These papers will have stricter ML4H review standards, but, similar to the <a href="https://icml.cc/public/JournalToConference" target="_blank">Journal-to-Conference Track</a>, your work would be accepted at ML4H and be then granted an additional presentation opportunity at our TS4H workshop (subject to area fit assessment). See this <a href="https://ahli.cc/ml4h/cross-submission/" target="_blank">page</a> for further details.
-        </p> -->
-        
-        <!-- === MODIFICATIONS END HERE === -->
-    </div>
-<style>
-        .topic-category {
-          font-size: 21px; /* Slightly larger than the default h4 */
-          font-weight: normal; /* Not bold */
-          margin-top: 20px;
-        }
-        .topic-detail {
-          font-size: 15px; /* Smaller size for the descriptive text */
-          color: #555;
-        }
-      </style>
 
-      <div class="row" style="font-size:18px">
-        <h2><a name="topics"></a>Topics of Interest</h2>
-        <hr>
-        <p>Submissions may explore but are not limited to:</p>
-        
-        <div class="row">
-          <div class="col-md-12">
-            <h4 class="topic-category">Models & Methods</h4>
-            <ul>
-              <li><b>Novel Architectures:</b> <span class="topic-detail">State-space models, diffusion models, etc.</span></li>
-              <li><b>Foundation Models:</b> <span class="topic-detail">Pre-training, scaling, and alignment.</span></li>
-              <li><b>Deep Learning:</b> <span class="topic-detail">Supervised, self-supervised, and unsupervised methods.</span></li>
-              <li><b>Probabilistic Modeling:</b> <span class="topic-detail">Uncertainty quantification and Bayesian methods.</span></li>
-              <li><b>Sequential Decision-Making:</b> <span class="topic-detail">Reinforcement learning and optimal control.</span></li>
-            </ul>
-          </div>
-        </div>
-        
-        <div class="row">
-          <div class="col-md-12">
-            <h4 class="topic-category">Data-Specific Challenges</h4>
-            <ul>
-              <li><b>Multimodal Learning:</b> <span class="topic-detail">Fusing time series with images, text, or genomics.</span></li>
-              <li><b>Irregular & Missing Data:</b> <span class="topic-detail">Handling sparse or irregularly-sampled series.</span></li>
-              <li><b>Complex Signals:</b> <span class="topic-detail">Modeling high-dimensional or multi-resolution data.</span></li>
-              <li><b>Causal Inference:</b> <span class="topic-detail">Inferring cause-and-effect from observational data.</span></li>
-            </ul>
-          </div>
-        </div>
-        
-        <div class="row">
-          <div class="col-md-12">
-            <h4 class="topic-category">Applications & Trustworthy AI</h4>
-            <ul>
-              <li><b>Clinical Applications:</b> <span class="topic-detail">Forecasting, risk stratification, digital biomarkers.</span></li>
-              <li><b>Trust & Reliability:</b> <span class="topic-detail">Explainability, fairness, robustness, and privacy.</span></li>
-              <li><b>Deployment & Implementation:</b> <span class="topic-detail">Real-world case studies and MLOps.</span></li>
-              <li><b>New Resources:</b> <span class="topic-detail">Public datasets, benchmarks, and software.</span></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="row" style="font-size:18px">
-        <h2><a name="instructions"></a>Submission Instructions</h2>
-        <hr>
-        <p>
-          We invite short papers of <strong>up to 4 pages</strong>, excluding references and appendices. All submissions should follow the official NeurIPS ‘25 paper formatting guidelines (paper checklist is NOT needed) and be fully <strong>anonymized</strong> for a double-blind review process. Submitted work should be original and unpublished, though submissions on preprint servers like arXiv are permitted. Authors will be asked to confirm that their submissions accord with the <a href="https://neurips.cc/public/CodeOfConduct">NeurIPS Code of Conduct</a>
-        </p>
-        <p>
-          All accepted papers must be presented <strong>in person</strong> at the workshop. This is a non-archival venue and there will be no formal proceedings.
-        </p>
-      <div style="text-align: center;">
-        <a href="https://openreview.net/group?id=NeurIPS.cc/2025/Workshop/TS4H" class="btn btn-primary btn-lg">OpenReview Submission</a>
-      </div>       
-      </div>
-
-      <div class="row" style="font-size:18px">
-        <h2><a name="dates"></a>Important Dates</h2>
-        <hr>
-        <p><strong>Submission Deadline:</strong> <del>August 22, 2025</del> September 1, 2025 (AOE)</p>
-        <p><strong>Acceptance Notification:</strong> September 22, 2025</p>
-        <blockquote style="font-size:18px; margin-left:20px;">
-          <p><strong>
-            For cross-submitted papers to ML4H, decisions will follow the ML4H schedule:
-            TS4H acceptance notifications will be announced a few days after ML4H decision release (October 24).
-          </strong></p>
-        </blockquote>
-         <p><strong>Camera-Ready Submission Deadline:</strong> November 23, 2025 (AOE)</p>
-        <p><strong>Workshop Date:</strong> December 7, 2025 (Co-located with NeurIPS '25 in San Diego, United States)</p>
-      </div>
-
-      <div class="row" style="font-size:18px">
-          <h2><a name="dates"></a>Frequently Asked Questions (FAQ)</h2>
+        <!-- Key Dates -->
+        <div class="row" style="font-size:18px">
+          <h2 id="dates">Key Dates</h2>
           <hr>
-          
-          <dl>
-              <dt><strong>Q0.</strong> When will ML4H -> TS4H and spotlight decisions be made?</dt>
-              <dd>November 11th.</dd>
-              <br>
-              <dt><strong>Q1.</strong> What does “non-archival venue” mean?</dt>
-              <dd>A non-archival venue is one where accepted papers are not formally published in proceedings. This means the work will not appear in a permanent, citable archive.</dd>
-              <br>
-              <dt><strong>Q2.</strong> Does this mean accepted papers can be submitted elsewhere (e.g., to a journal or another conference)?</dt>
-              <dd>Yes! Since our workshop is non-archival, you are free to submit your work elsewhere. We do recommend checking the policies of your target journal or conference, as some may have restrictions on prior presentations — even at non-archival events.</dd>
-              <br>
-              <dt><strong>Q3.</strong> Can I submit a paper that has been withdrawn from the main track of a conference?</dt>
-              <dd>Absolutely. You are welcome to submit such work to our workshop.</dd>
-              <br>
-              <dt><strong>Q4.</strong> Can I submit the same work to your workshop and another venue (e.g., other NeurIPS workshop) at the same time?</dt>
-              <dd>Yes, concurrent submissions are allowed. Please ensure that your other target venue’s rules permit this.</dd>
-              <br>
-              <dt><strong>Q5.</strong> Can I present work at the workshop that has already been accepted elsewhere?</dt>
-              <dd>Yes, provided that the other venue’s policies allow for prior or concurrent presentation at a non-archival workshop. Always confirm with the other venue first.</dd>
-              <br>
-              <dt><strong>Q6.</strong> Should we include NeurIPS checklist to our submission?</dt>
-              <dd>No need to include checklist for our workshop submission!</dd>
-          </dl>
-          
+          <ul class="tight-list">
+            <li>Submissions open: <strong>Sunday, 12 Jan 2026</strong></li>
+            <li>Submissions close: <strong>13 Feb 2026, 11:59PM UTC-12</strong></li>
+            <li>Notification: <strong>Wednesday, 1 March 2026, 11:59PM UTC-12</strong></li>
+            <li>Camera-ready deadline: <strong>Tuesday, 15 Apr 2026, 11:59PM UTC-12</strong></li>
+            <li>Workshop: <strong>Monday, 26 Apr 2026</strong></li>
+          </ul>
+        </div>
+
+        <!-- Topics -->
+        <div class="row" style="font-size:18px">
+          <h2 id="topics">Topics of Interest</h2>
+          <hr>
+          <p>We welcome submissions from a range of application areas and methodological topics:</p>
+
+          <p><strong>Core Genomics Applications of GenAI methods</strong>, such as in:</p>
+          <ul class="tight-list">
+            <li>
+              <strong>Single-cell -omics:</strong>
+              Multi-omic integration, conditional and cross-modal generation, single cell trajectory simulation and control,
+              perturbation effect modeling, target identification, virtual cell models.
+            </li>
+            <li>
+              <strong>Spatial transcriptomics and tissue modeling:</strong>
+              Generative models for in silico tissue reconstruction, cell-cell interaction modeling, and spatial perturbation response.
+            </li>
+            <li>
+              <strong>Regulatory genomics and epigenomics:</strong>
+              DNA language models with multi-modality, design of regulatory elements for cell-type-specific activity,
+              DNA and RNA sequence generation.
+            </li>
+            <li>
+              <strong>Population genomics:</strong>
+              Ancestry-aware generative models, rare variant simulation, generative modeling for variant effect prediction,
+              genotype-phenotype modeling.
+            </li>
+          </ul>
+
+          <p style="margin-top:14px;"><strong>Methodological Themes</strong>, such as:</p>
+          <ul class="tight-list">
+            <li>
+              <strong>Adapting generative models to biological data:</strong>
+              Transformers, diffusion, flow-based generative models, and VAEs, tailored for biological data.
+            </li>
+            <li>
+              <strong>Pretrained foundation models for genomics:</strong>
+              Large-scale self-supervised learning across multiple scales and data modalities, genome-scale masked modeling.
+            </li>
+            <li>
+              <strong>Latent space interpretation:</strong>
+              Interpretation of large-scale foundation models, enforcing disentanglement of biological factors,
+              linking latent variables to known biology.
+            </li>
+            <li>
+              <strong>Data-efficient generation:</strong>
+              Techniques to generate from few-shot data or under noisy, incomplete annotations common in genomics.
+            </li>
+            <li>
+              <strong>Evaluation and benchmarks:</strong>
+              Designing suitable benchmarking tasks and evaluation criteria, re-evaluating existing models with robust benchmarks.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Submission Instructions -->
+        <div class="row" style="font-size:18px">
+          <h2 id="submit">Submission Instructions</h2>
+          <hr>
+          <p>We will offer two submission tracks.</p>
+
+          <h3 style="margin-top:10px;">Regular Papers</h3>
+          <p>
+            Regular paper submissions may be up to <strong>8 pages</strong>, excluding Software and Data, References, and Appendix.
+            Submissions that exceed this page limit will not be considered for review.
+          </p>
+          <p>
+            Authors should prepare their manuscripts using the <strong>Regular-Paper Gen<sup>2</sup> LaTeX style</strong>,
+            adapted from the ICLR 2026 LaTeX template, which can be downloaded from the Templates section below.
+          </p>
+
+          <h3 style="margin-top:18px;">Tiny Papers</h3>
+          <p>
+            Tiny paper submissions may be up to <strong>4 pages</strong>, excluding Software and Data, References, and Appendix.
+            Submissions that exceed this page limit will not be considered for review.
+          </p>
+
+          <p>In line with ICLR regulations, for this track we especially encourage submissions that present:</p>
+          <ul class="tight-list">
+            <li>An implementation and evaluation of an unpublished but simple idea</li>
+            <li>A modest yet self-contained theoretical result</li>
+            <li>A follow-up experiment or re-analysis of a previously published paper</li>
+            <li>A fresh perspective on an existing publication</li>
+          </ul>
+
+          <p>
+            Authors should prepare their manuscripts using the <strong>Tiny-Paper Gen<sup>2</sup> LaTeX style</strong>,
+            adapted from the ICLR 2026 LaTeX template, which can be downloaded from the Templates section below.
+          </p>
+        </div>
+
+        <!-- Originality -->
+        <div class="row" style="font-size:18px">
+          <h2 id="originality">Originality of Submission</h2>
+          <hr>
+          <p>
+            Submitted work must be original and not previously published. Submissions that have appeared on preprint servers,
+            such as arXiv, are permitted.
+          </p>
+        </div>
+
+        <!-- Review -->
+        <div class="row" style="font-size:18px">
+          <h2 id="review">Review Process</h2>
+          <hr>
+          <p>
+            The review process is double-blind. Do not include author information, author contributions, or acknowledgments in your initial submission.
+          </p>
+          <p>
+            For both tracks, authors may include an unlimited number of appendix pages after the bibliography.
+            Reviewers are not required to read the appendix.
+          </p>
+        </div>
+
+        <!-- LLM -->
+        <div class="row" style="font-size:18px">
+          <h2 id="llm">Use of Large Language Models (LLMs)</h2>
+          <hr>
+          <p>
+            In line with ICLR regulations, the use of large language models is permitted as a general-purpose assistance tool.
+            However, if an LLM plays a significant role in research ideation and/or writing, such that it could reasonably be considered a contributor,
+            authors must disclose its use. The specific role of the LLM should be described in a dedicated <strong>LLM Usage</strong> section,
+            which may be included in the appendix and does not count toward the page limit. Failure to disclose significant LLM usage may result in desk rejection.
+          </p>
+          <p>
+            For the Tiny Paper track, in line with ICLR regulations, fully AI-generated papers are not permitted in either submission format.
+            AI assistance is allowed, but submissions must be primarily human-authored and reflect original thought and analysis.
+            Authors are encouraged to consult guidance from NYU and MIT regarding the distinction between AI-generated and AI-assisted work.
+          </p>
+        </div>
+
+        <!-- Presentation -->
+        <div class="row" style="font-size:18px">
+          <h2 id="presentation">Presentation and Publications</h2>
+          <hr>
+          <p>
+            All accepted papers will be presented as posters during the workshop. A subset of papers from the Regular Paper track will be selected
+            for spotlight oral presentations based on reviewer feedback.
+          </p>
+          <p>
+            While the workshop is non-archival, authors of accepted papers will have the option to make their paper, poster, or presentation slides available
+            through the workshop website and the Gen<sup>2</sup> OpenReview venue.
+          </p>
+          <p>
+            This workshop is non-archival, meaning that accepted papers will not appear in official proceedings and will not preclude future submission
+            of the same or extended work to archival conference or journal venues.
+          </p>
+          <p>
+            We will encourage presenters of accepted submissions to attend the workshop in person, while accommodating virtual attendance in cases of visa issues
+            or other exceptional circumstances. In such cases, we will coordinate in advance to collect pre-recorded presentations to broadcast during the event.
+          </p>
+        </div>
+
+        <!-- Templates & Submission -->
+        <div class="row" style="font-size:18px">
+          <h2 id="templates">Templates and Submission Link</h2>
+          <hr>
+          <p>
+            All submissions will be handled on <strong>openreview.net</strong>: <a href="#">submission link</a>.
+          </p>
+          <p><strong>Templates</strong></p>
+          <ul class="tight-list">
+            <li><a href="#">Regular Paper Gen<sup>2</sup> LaTeX style (download)</a></li>
+            <li><a href="#">Tiny Paper Gen<sup>2</sup> LaTeX style (download)</a></li>
+            <li><a href="#">ICLR 2026 LaTeX template (download)</a></li>
+          </ul>
+          <p class="text-muted" style="font-size:14px;">
+            Replace the placeholder links above with your final URLs.
+          </p>
+        </div>
+
+        <!-- FAQ -->
+        <div class="row" style="font-size:18px">
+          <h2 id="faq">Frequently Asked Questions (FAQ)</h2>
+          <hr>
+
+          <p><strong>What does “non-archival” mean?</strong></p>
+          <p>
+            This workshop is non-archival, meaning that accepted papers will not appear in official proceedings and will not preclude future submission
+            of the same or extended work to archival conference or journal venues.
+          </p>
+
+          <p><strong>Can I submit the same work to another workshop?</strong></p>
+          <p>
+            Concurrent submission of the same or related work to other venues is permitted, subject to the policies of those venues.
+          </p>
+
+          <p><strong>Can I submit a work at the workshop that has already been accepted elsewhere?</strong></p>
+          <p>
+            As this workshop is non-archival, submissions of work that have been accepted but not yet formally published are permitted.
+          </p>
+        </div>
+
+        <!-- Optional Code of Conduct section (kept from the original template, now generic) -->
+        <div class="row" style="font-size:18px">
+          <h2 id="coc">Code of Conduct</h2>
+          <hr>
+          <p>
+            Participants are expected to follow the conference and workshop code of conduct. Please refer to the official ICLR code of conduct page.
+          </p>
+        </div>
+
       </div>
-
-
     </div>
+
+    <hr>
+    <footer>
+      &nbsp;
+    </footer>
   </div>
 
-  <hr>
-
-  <footer>
-  &nbsp;
-  </footer>
-</div>
-
+  <!-- JavaScript -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
   <script type="text/x-mathjax-config">
