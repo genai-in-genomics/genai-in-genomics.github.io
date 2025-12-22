@@ -8,19 +8,111 @@ active_page: faq
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="NeurIPS Workshop on Learning from Time Series for Health.">
-  <meta name="author" content="TS4H Organizers">
+  <meta name="description" content="ICLR Workshop on Generative AI in Genomics (Gen²).">
+  <meta name="author" content="Gen² Organizers">
   <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
   <title>FAQ | Generative AI in Genomics (Gen²) Workshop</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <link rel="stylesheet" href="css/main.css">
   
   <style>
     /* Text Justification for Body Content */
     .container p {
       text-align: justify;
+    }
+
+    /* FAQ Accordion Styling */
+    .faq-accordion {
+      max-width: 900px;
+      margin: 40px auto;
+    }
+
+    .faq-item {
+      background-color: #fff;
+      border: 2px solid #e0e7ff;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .faq-item:hover {
+      border-color: #c7d2fe;
+    }
+    
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 20px 25px;
+      text-align: left;
+      font-size: 1.1em;
+      font-weight: 600;
+      color: #000;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background-color 0.2s ease;
+    }
+
+    .faq-question:hover {
+      background-color: #f9fafb;
+    }
+
+    .faq-question:focus {
+      outline: none;
+    }
+
+    .faq-icon {
+      font-size: 1.5em;
+      color: #357bb6;
+      transition: transform 0.3s ease;
+      flex-shrink: 0;
+      margin-left: 15px;
+      font-weight: bold;
+    }
+
+    .faq-item.active .faq-icon {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+      padding: 0 25px;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 500px;
+      padding: 0 25px 20px 25px;
+    }
+
+    .faq-answer p {
+      margin: 0;
+      color: #4b5563;
+      font-size: 1em;
+      line-height: 1.6;
+    }
+
+    /* Responsive */
+    @media screen and (max-width: 768px) {
+      .faq-question {
+        font-size: 1em;
+        padding: 15px 20px;
+      }
+
+      .faq-answer {
+        padding: 0 20px;
+      }
+
+      .faq-item.active .faq-answer {
+        padding: 0 20px 15px 20px;
+      }
     }
   </style>
 
@@ -31,27 +123,55 @@ active_page: faq
   <div class="row" style="padding:20px">
     <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1">
 
-      <div class="row" style="font-size:18px">
-          <h2><a name="dates"></a>Frequently Asked Questions (FAQ)</h2>
-          <hr>
-          
-          <dl>
-              <dt><strong>Q1.</strong> What does “non-archival venue” mean?</dt>
-              <dd>A non-archival venue is one where accepted papers are not formally published in proceedings. This means the work will not appear in a permanent, citable archive.</dd>
-              <br>
-              <dt><strong>Q2.</strong> Does this mean accepted papers can be submitted elsewhere (e.g., to a journal or another conference)?</dt>
-              <dd>Yes! Since our workshop is non-archival, you are free to submit your work elsewhere. We do recommend checking the policies of your target journal or conference, as some may have restrictions on prior presentations — even at non-archival events.</dd>
-              <br>
-              <dt><strong>Q3.</strong> Can I submit a paper that has been withdrawn from the main track of a conference?</dt>
-              <dd>Absolutely. You are welcome to submit such work to our workshop.</dd>
-              <br>
-              <dt><strong>Q4.</strong> Can I submit the same work to your workshop and another venue (e.g., another ICLR workshop) at the same time?</dt>
-              <dd>Yes, concurrent submissions are allowed. However, please ensure that your other target venues also permit this.</dd>
-              <br>
-          </dl>
-          
-      </div>
+      <h2 style="text-align: center; margin-bottom: 40px;">Frequently Asked Questions</h2>
 
+      <div class="faq-accordion">
+        
+        <!-- Q1 -->
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFAQ(this)">
+            <span>What does "non-archival venue" mean?</span>
+            <i class="fa fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>A non-archival venue is one where accepted papers are not formally published in proceedings. This means the work will not appear in a permanent, citable archive.</p>
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFAQ(this)">
+            <span>Does this mean accepted papers can be submitted elsewhere (e.g., to a journal or another conference)?</span>
+            <i class="fa fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Yes! Since our workshop is non-archival, you are free to submit your work elsewhere. We do recommend checking the policies of your target journal or conference, as some may have restrictions on prior presentations — even at non-archival events.</p>
+          </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFAQ(this)">
+            <span>Can I submit a paper that has been withdrawn from the main track of a conference?</span>
+            <i class="fa fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Absolutely. You are welcome to submit such work to our workshop.</p>
+          </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFAQ(this)">
+            <span>Can I submit the same work to your workshop and another venue (e.g., another ICLR workshop) at the same time?</span>
+            <i class="fa fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Yes, concurrent submissions are allowed. However, please ensure that your other target venues also permit this.</p>
+          </div>
+        </div>
+
+      </div>
 
     </div>
   </div>
@@ -65,6 +185,25 @@ active_page: faq
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  
+  <!-- FAQ Accordion Script -->
+  <script>
+    function toggleFAQ(button) {
+      const faqItem = button.parentElement;
+      const isActive = faqItem.classList.contains('active');
+      
+      // Close all FAQ items
+      document.querySelectorAll('.faq-item').forEach(item => {
+        item.classList.remove('active');
+      });
+      
+      // Open clicked item if it wasn't already open
+      if (!isActive) {
+        faqItem.classList.add('active');
+      }
+    }
+  </script>
+  
   <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
