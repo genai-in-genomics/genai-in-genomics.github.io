@@ -24,6 +24,13 @@
     font-weight: 300;
     font-size: 2.2rem;
   }
+  .back h3 a {
+    color: white;
+    text-decoration: none;
+  }
+  .back h3 a:hover {
+    text-decoration: underline;
+  }
   .nav .btn { 
     font-size: 30px; 
     color: white;
@@ -55,6 +62,7 @@
       <div class="nav">
           <a href="index.html" class="btn {% if page.active_page == 'home' %}active{% endif %}">Home</a>
           <a href="call_for_papers.html" class="btn {% if page.active_page == 'cfp' %}active{% endif %}">Call for Papers</a>
+          <a href="dates.html" class="btn {% if page.active_page == 'dates' %}active{% endif %}">Dates</a>
           <a href="program.html" class="btn {% if page.active_page == 'program' %}active{% endif %}">Program</a>
           <a href="faq.html" class="btn {% if page.active_page == 'faq' %}active{% endif %}">FAQ</a>
           <!-- <div class="dropdown">

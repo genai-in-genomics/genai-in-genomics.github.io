@@ -8,38 +8,101 @@ active_page: dates
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="NeurIPS Workshop on Learning from Time Series for Health.">
-  <meta name="author" content="TS4H Organizers">
-  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+  <meta name="description" content="ICLR Workshop on Generative AI in Genomics (Gen²).">
+  <meta name="author" content="Gen² Organizers">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <title>Key Dates | Generative AI in Genomics (Gen²) Workshop</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
   <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
+  
+  <style>
+    /* Important Dates Styling */
+    .important-dates-list {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0;
+      list-style: none;
+    }
 
-  </head>
+    .date-item {
+      background-color: #f9f9f9;
+      border: 1px solid #eee;
+      padding: 20px 30px;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 5px;
+    }
+
+    .date-item:nth-child(odd) {
+      background-color: #fff;
+    }
+
+    .date-event {
+      font-size: 1.2em;
+      color: #333;
+      font-weight: normal;
+    }
+
+    .date-value {
+      font-size: 1.2em;
+      color: #000;
+      font-weight: bold;
+    }
+
+    .date-value .date-note {
+      font-weight: normal;
+      color: #555;
+    }
+
+    /* Responsive adjustments */
+    @media screen and (max-width: 600px) {
+      .date-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .date-value {
+        margin-top: 5px;
+      }
+    }
+  </style>
+
+</head>
 <body>
 {% include header.html %}
+
 <div class="container">
   <div class="row" style="padding:20px">
-    <div class="hidden-xs col-sm-3 col-md-2" id="sidebar" role="navigation" style="margin-top:10px">
-      </div>
-
-    <div class="col-xs-12 col-sm-9 col-md-9">
-
-      div class="row" style="font-size:18px">
-          <h2 id="dates">Key Dates & Deadlines</h2>
-          <hr>
-          <ul class="tight-list">
-            <li>Submissions open:  <strong>TBD</strong></li>
-              <!-- <strong>Sunday, 12 Jan 2026</strong></li> -->
-            <li>Submissions close: <strong>Sunday, 1 Feb 2026, 11:59PM UTC-12 </strong> (Anywhere on Earth)</li>
-            <li>Notification: <strong>Sunday, 1 March 2026, 11:59PM UTC-12</strong> (Anywhere on Earth)</li>
-            <li>Camera-ready deadline: <strong>TBD</strong></li>
-            <li>Workshop: <strong>Sunday or Monday, 26 or 27 Apr 2026</strong> (TBD)</li>
-          </ul>
+    <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1">
+      
+      <h2 style="text-align: center; margin-bottom: 40px;">Important Dates</h2>
+      
+      <div class="important-dates-list">
+        <div class="date-item">
+          <span class="date-event">Submissions open</span>
+          <span class="date-value">TBD</span>
         </div>
-
+        <div class="date-item">
+          <span class="date-event">Submissions close</span>
+          <span class="date-value">Sunday, 1 Feb 2026, 11:59PM <span class="date-note">(AoE)</span></span>
+        </div>
+        <div class="date-item">
+          <span class="date-event">Notification</span>
+          <span class="date-value">Sunday, 1 March 2026, 11:59PM <span class="date-note">(AoE)</span></span>
+        </div>
+        <div class="date-item">
+          <span class="date-event">Camera-ready deadline</span>
+          <span class="date-value">TBD</span>
+        </div>
+        <div class="date-item">
+          <span class="date-event">Workshop</span>
+          <span class="date-value">Sunday or Monday, 26 or 27 Apr 2026 <span class="date-note">(TBD)</span></span>
+        </div>
+      </div>
 
     </div>
   </div>
