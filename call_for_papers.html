@@ -33,7 +33,7 @@ active_page: cfp
 
     .topic-panel {
       padding: 25px;
-      background-color: #f8f9fa;
+      background-color: #EBF8FA;
       border-radius: 5px;
       height: 100%;
     }
@@ -57,16 +57,26 @@ active_page: cfp
       list-style: disc;
       padding-left: 20px;
     }
-
     .topic-panel li {
+    margin-bottom: 3px;  /* Browser default spacing only */
+  }
+/*    .topic-panel li {
       margin-bottom: 12px;
-    }
+    }*/
 
     /* Responsive: stack on mobile */
     @media screen and (max-width: 768px) {
       .topics-container {
         grid-template-columns: 1fr;
       }
+    }
+
+    /* Gray box for Reciprocal Review */
+    .reciprocal-review-box {
+      background-color: #EBF8FA;
+      padding: 20px;
+      border-radius: 5px;
+      margin-top: 15px;
     }
   </style>
 
@@ -103,8 +113,9 @@ active_page: cfp
            Please review the submission instructions on this page and reach out to <a href="mailto:genai-in-genomics@googlegroups.com">genai-in-genomics@googlegroups.com</a> if you have any questions.  
          </p>
 
-           <strong>Reciprocal Review:</strong> To ensure a fair and high-quality review process, we require that each submission nominate at least one author to review up to 3 submissions between <strong>February 3 - 20</strong> via the submission page.
-          </p>
+          <div class="reciprocal-review-box">
+            <p><strong>Reciprocal Review:</strong> To ensure a fair and high-quality review process, we require that each submission nominate at least one author to review up to 3 submissions between <strong>February 3 - 20</strong> via the submission page.</p>
+          </div>
         </div>
 
         <!-- Key Dates -->
@@ -131,9 +142,7 @@ active_page: cfp
           <div class="topics-container">
             <!-- Panel 1: Core Genomics Applications -->
             <div class="topic-panel">
-              <h5 class="genomics-title">Core Genomics Applications of GenAI methods</h5>
-              <ul>
-                <li>
+              <h3 class="genomics-title">Core Genomics Applications</h3>
                   <strong>Single-cell -omics:</strong>
                   <ul>
                     <li>Multi-omic integration,</li>
@@ -143,7 +152,6 @@ active_page: cfp
                     <li>target identification,</li>
                     <li>virtual cell models.</li>
                   </ul>
-                <li>
                   <strong>Spatial transcriptomics and tissue modeling:</strong>
                   <ul>
                     <li>Generative models for in silico tissue reconstruction,</li>
@@ -151,9 +159,6 @@ active_page: cfp
                     <li>self-supervised learning of tissue domains,</li>
                     <li>spatial perturbation response.</li>
                   </ul>
-                    
-                </li>
-                <li>
                   <strong>Regulatory genomics and epigenomics:</strong>
                   <ul>
                     <li>Sequence-to-function deep learning models of genome regulations,</li>
@@ -161,8 +166,6 @@ active_page: cfp
                     <li>design of regulatory elements for cell-type-specific activity,</li>
                     <li>DNA and RNA sequence generation.</li>
                   </ul>
-                </li>
-                <li>
                   <strong>Population genomics:</strong>
                   <ul>
                     <li>Ancestry-aware generative models,</li>
@@ -170,51 +173,37 @@ active_page: cfp
                     <li>generative modeling for variant effect prediction,</li>
                     <li>genotype-phenotype modeling.</li>
                   </ul>
-                </li>
-              </ul>
             </div>
 
             <!-- Panel 2: Methodological Themes -->
             <div class="topic-panel">
-              <h5 class="methodological-title">Methodological Themes</h5>
-              <ul>
-                <li>
-                  <strong>Adapting generative models to biological data:</strong>
+              <h3 class="methodological-title">Methodological Themes</h3>
+             <strong>Adapting generative models to biological data:</strong>
                   <ul>
                     <li>Diffusion- and flow-based generative models,</li>
                     <li>transformers,</li>
                     <li>VAEs and GANs etc tailored for biological data and tasks.</li>
                   </ul>
-                </li>
-                <li>
                   <strong>Pretrained foundation models for genomics:</strong>
                   <ul>
                     <li>Large-scale self-supervised learning across multiple scales and data modalities,</li>
                     <li>genome-scale masked modeling.</li>
                   </ul>
-                </li>
-                <li>
                   <strong>Latent space interpretation:</strong>
                   <ul>
                     <li>Interpretation of large-scale foundation models,</li>
                     <li>enforcing disentanglement of biological factors,</li>
                     <li>linking latent variables to known biology.</li>
                   </ul>
-                </li>
-                <li>
                   <strong>Data-efficient generation:</strong>
                   <ul>
                     <li>Techniques to generate from few-shot data or under noisy, incomplete annotations common in genomics.</li>
                   </ul>
-                </li>
-                <li>
                   <strong>Evaluation and benchmarks:</strong>
                   <ul>
                     <li>Designing suitable benchmarking tasks and evaluation criteria,</li>
                     <li>re-evaluating existing models with robust benchmarks and metrics.</li>
                   </ul>
-                </li>
-              </ul>
             </div>
           </div>
         </div>
@@ -224,9 +213,15 @@ active_page: cfp
           <h2 id="submit">Submission Instructions</h2>
           <hr>
           <p>
-            All submissions will be handled on <strong>openreview.net</strong>: <a href="https://openreview.net/group?id=ICLR.cc/2026/Workshop/Gen2">submission link</a>.  
-          </p>
-          <p>We offer two submission tracks :</p>
+            All submissions will be handled on  <a href="https://openreview.net/group?id=ICLR.cc/2026/Workshop/Gen2"><strong>openreview.net</strong></a>:
+            </p>
+            <div style="text-align:font-size: 1em; ">
+                <a href="https://openreview.net/group?id=ICLR.cc/2026/Workshop/Gen2" class="btn btn-primary" style="margin-top: 10px;">Submit on OpenReview</a>
+                </div>
+
+          
+          <p><br>
+          We offer two submission tracks :</p>
 
           <h3 style="margin-top:10px;">Regular Papers</h3>
           <p>

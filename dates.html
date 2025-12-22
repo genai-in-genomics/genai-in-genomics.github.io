@@ -51,11 +51,22 @@ active_page: dates
       font-size: 1.2em;
       color: #000;
       font-weight: bold;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
     }
 
     .date-value .date-note {
       font-weight: normal;
       color: #555;
+    }
+
+    /* Countdown timer styling */
+    .countdown {
+      font-size: 0.85em;
+      color: #dc3545;
+      font-weight: normal;
+      margin-top: 5px;
     }
 
     /* Responsive adjustments */
@@ -67,6 +78,7 @@ active_page: dates
 
       .date-value {
         margin-top: 5px;
+        align-items: flex-start;
       }
     }
   </style>
@@ -88,7 +100,10 @@ active_page: dates
         </div>
         <div class="date-item">
           <span class="date-event">Submissions close</span>
-          <span class="date-value">Sunday, 1 Feb 2026, 11:59PM <span class="date-note">(AoE)</span></span>
+          <span class="date-value">
+            <span>Sunday, 1 Feb 2026, 11:59PM <span class="date-note">(AoE)</span></span>
+            <span class="countdown" id="submission-countdown">Loading...</span>
+          </span>
         </div>
         <div class="date-item">
           <span class="date-event">Notification</span>
@@ -116,6 +131,41 @@ active_page: dates
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  
+  <!-- Countdown Timer Script -->
+  <script>
+    function updateCountdown() {
+      // Submission deadline: Feb 1, 2026, 11:59 PM AoE (Anywhere on Earth)
+      // AoE is UTC-12, so we need to add 12 hours to get UTC time
+      const deadline = new Date('2026-02-02T11:59:00Z'); // Feb 2 at 11:59 UTC = Feb 1 at 11:59 AoE
+      const now = new Date();
+      const diff = deadline - now;
+      
+      const countdownElement = document.getElementById('submission-countdown');
+      
+      if (diff <= 0) {
+        countdownElement.textContent = 'Deadline passed';
+        return;
+      }
+      
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      
+      if (days > 0) {
+        countdownElement.textContent = `${days} day${days !== 1 ? 's' : ''} remaining`;
+      } else if (hours > 0) {
+        countdownElement.textContent = `${hours} hour${hours !== 1 ? 's' : ''} remaining`;
+      } else {
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        countdownElement.textContent = `${minutes} minute${minutes !== 1 ? 's' : ''} remaining`;
+      }
+    }
+    
+    // Update countdown immediately and then every minute
+    updateCountdown();
+    setInterval(updateCountdown, 60000); // Update every minute
+  </script>
+  
   <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {

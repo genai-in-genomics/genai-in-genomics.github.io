@@ -8,8 +8,8 @@ active_page: cfp
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="NeurIPS Workshop on Learning from Time Series for Health.">
-  <meta name="author" content="TS4H Organizers">
+  <meta name="description" content="ICLR Workshop on Generative AI in Genomics (Gen²).">
+  <meta name="author" content="Gen² Organizers">
   <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
   <title>Call for Papers | Generative AI in Genomics (Gen²) Workshop</title>
 
@@ -21,6 +21,52 @@ active_page: cfp
     /* Text Justification for Body Content */
     .container p {
       text-align: justify;
+    }
+
+    /* Two-Column Panel Layout for Topics */
+    .topics-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .topic-panel {
+      padding: 25px;
+      background-color: #f8f9fa;
+      border-radius: 5px;
+      height: 100%;
+    }
+
+    .topic-panel h3 {
+      text-align: center;
+      font-size: 1.5em;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    .genomics-title {
+      color: #009C41;
+    }
+
+    .methodological-title {
+      color: #007bff;
+    }
+
+    .topic-panel ul {
+      list-style: disc;
+      padding-left: 20px;
+    }
+
+    .topic-panel li {
+      margin-bottom: 12px;
+    }
+
+    /* Responsive: stack on mobile */
+    @media screen and (max-width: 768px) {
+      .topics-container {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 
@@ -82,53 +128,95 @@ active_page: cfp
           <p>We welcome submissions covering position papers, new datasets and tasks, novel GenAI method development, and applications of existing models in genomics. Topics of interest include, but are not limited to:
           </p>
 
-          <p><strong>Core Genomics Applications of GenAI methods</strong>, such as in:</p>
-          <ul class="tight-list">
-            <li>
-              <strong>Single-cell -omics:</strong>
-              Multi-omic integration, conditional and cross-modal generation, single cell trajectory simulation and control,
-              perturbation effect modeling, target identification, virtual cell models.
-            </li>
-            <li>
-              <strong>Spatial transcriptomics and tissue modeling:</strong>
-              Generative models for in silico tissue reconstruction, cell-cell interaction modeling, and spatial perturbation response.
-            </li>
-            <li>
-              <strong>Regulatory genomics and epigenomics:</strong>
-              DNA language models with multi-modality, design of regulatory elements for cell-type-specific activity,
-              DNA and RNA sequence generation.
-            </li>
-            <li>
-              <strong>Population genomics:</strong>
-              Ancestry-aware generative models, rare variant simulation, generative modeling for variant effect prediction,
-              genotype-phenotype modeling.
-            </li>
-          </ul>
+          <div class="topics-container">
+            <!-- Panel 1: Core Genomics Applications -->
+            <div class="topic-panel">
+              <h3 class="genomics-title">Core Genomics Applications</h3>
+              <ul>
+                <li>
+                  <strong>Single-cell -omics:</strong>
+                  <ul>
+                    <li>Multi-omic integration,</li>
+                    <li>conditional and cross-modal generation,</li>
+                    <li>single cell trajectory simulation,</li>
+                    <li>perturbation effect modeling,</li>
+                    <li>target identification,</li>
+                    <li>virtual cell models.</li>
+                  </ul>
+                <li>
+                  <strong>Spatial transcriptomics and tissue modeling:</strong>
+                  <ul>
+                    <li>Generative models for in silico tissue reconstruction,</li>
+                    <li>cell-cell interaction modeling,</li>
+                    <li>self-supervised learning of tissue domains,</li>
+                    <li>spatial perturbation response.</li>
+                  </ul>
+                    
+                </li>
+                <li>
+                  <strong>Regulatory genomics and epigenomics:</strong>
+                  <ul>
+                    <li>Sequence-to-function deep learning models of genome regulations,</li>
+                    <li>DNA language models with multi-modality,</li>
+                    <li>design of regulatory elements for cell-type-specific activity,</li>
+                    <li>DNA and RNA sequence generation.</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>Population genomics:</strong>
+                  <ul>
+                    <li>Ancestry-aware generative models,</li>
+                    <li>rare variant simulation,</li>
+                    <li>generative modeling for variant effect prediction,</li>
+                    <li>genotype-phenotype modeling.</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
 
-          <p style="margin-top:14px;"><strong>Methodological Themes</strong>, such as:</p>
-          <ul class="tight-list">
-            <li>
-              <strong>Adapting generative models to biological data:</strong>
-              Transformers, diffusion, flow-based generative models, and VAEs, tailored for biological data.
-            </li>
-            <li>
-              <strong>Pretrained foundation models for genomics:</strong>
-              Large-scale self-supervised learning across multiple scales and data modalities, genome-scale masked modeling.
-            </li>
-            <li>
-              <strong>Latent space interpretation:</strong>
-              Interpretation of large-scale foundation models, enforcing disentanglement of biological factors,
-              linking latent variables to known biology.
-            </li>
-            <li>
-              <strong>Data-efficient generation:</strong>
-              Techniques to generate from few-shot data or under noisy, incomplete annotations common in genomics.
-            </li>
-            <li>
-              <strong>Evaluation and benchmarks:</strong>
-              Designing suitable benchmarking tasks and evaluation criteria, re-evaluating existing models with robust benchmarks.
-            </li>
-          </ul>
+            <!-- Panel 2: Methodological Themes -->
+            <div class="topic-panel">
+              <h3 class="methodological-title">Methodological Themes</h3>
+              <ul>
+                <li>
+                  <strong>Adapting generative models to biological data:</strong>
+                  <ul>
+                    <li>Diffusion- and flow-based generative models,</li>
+                    <li>transformers,</li>
+                    <li>VAEs and GANs etc tailored for biological data and tasks.</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>Pretrained foundation models for genomics:</strong>
+                  <ul>
+                    <li>Large-scale self-supervised learning across multiple scales and data modalities,</li>
+                    <li>genome-scale masked modeling.</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>Latent space interpretation:</strong>
+                  <ul>
+                    <li>Interpretation of large-scale foundation models,</li>
+                    <li>enforcing disentanglement of biological factors,</li>
+                    <li>linking latent variables to known biology.</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>Data-efficient generation:</strong>
+                  <ul>
+                    <li>Techniques to generate from few-shot data or under noisy, incomplete annotations common in genomics.</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>Evaluation and benchmarks:</strong>
+                  <ul>
+                    <li>Designing suitable benchmarking tasks and evaluation criteria,</li>
+                    <li>re-evaluating existing models with robust benchmarks and metrics.</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
 
         <!-- Submission Instructions -->
@@ -222,30 +310,12 @@ active_page: cfp
           </p>
         </div>
 
-        <!-- Templates & Submission -->
-<!--         <div class="row" style="font-size:18px">
-          <h2 id="templates">Templates and Submission Link</h2>
-          <hr>
-          <p>
-            All submissions will be handled on <strong>openreview.net</strong>: <a href="#">submission link</a>.
-          </p>
-          <p>
-            Authors should prepare their manuscripts using the ICLR 2026 main conference template, 
-            replacing the style file with the Gen<sup>2</sup> version (adapted from the ICLR style file). 
-          </p>
-          <p><strong>Templates</strong></p>
-          <ul class="tight-list">
-            <li><a href="https://drive.google.com/file/d/1VW8dGqjWcV17w4PvQRpZpAU_YAOgXLSB/view?usp=sharing">Gen<sup>2</sup> LaTeX style file (download)</a></li>
-            <li><a href="https://github.com/ICLR/Master-Template/raw/master/iclr2026.zip">ICLR 2026 LaTeX template (download)</a></li>
-          </ul>
-        </div> -->
-
         <!-- FAQ -->
         <div class="row" style="font-size:18px">
           <h2 id="faq">Frequently Asked Questions (FAQ)</h2>
           <hr>
 
-          <p><strong>What does “non-archival” mean?</strong></p>
+          <p><strong>What does "non-archival" mean?</strong></p>
           <p>
             This workshop is non-archival, meaning that accepted papers will not appear in official proceedings and will not preclude future submission
             of the same or extended work to archival conference or journal venues.
@@ -261,15 +331,6 @@ active_page: cfp
             As this workshop is non-archival, submissions of work that have been accepted but not yet formally published are permitted.
           </p>
         </div>
- 
-        <!--Optional Code of Conduct section (kept from the original template, now generic) -->
-        <!-- <div class="row" style="font-size:18px">
-          <h2 id="coc">Code of Conduct</h2>
-          <hr>
-          <p>
-            Participants are expected to follow the conference and workshop code of conduct. Please refer to the official ICLR code of conduct page.
-          </p>
-        </div> -->
 
       </div>
     </div>
