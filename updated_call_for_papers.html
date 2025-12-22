@@ -1,0 +1,360 @@
+---
+layout: none
+active_page: cfp
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ICLR Workshop on Generative AI in Genomics (Gen²).">
+  <meta name="author" content="Gen² Organizers">
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+  <title>Call for Papers | Generative AI in Genomics (Gen²) Workshop</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  
+  <style>
+    /* Text Justification for Body Content */
+    .container p {
+      text-align: justify;
+    }
+
+    /* Two-Column Panel Layout for Topics */
+    .topics-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .topic-panel {
+      padding: 25px;
+      background-color: #f8f9fa;
+      border-radius: 5px;
+      height: 100%;
+    }
+
+    .topic-panel h3 {
+      text-align: center;
+      font-size: 1.5em;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    .genomics-title {
+      color: #009C41;
+    }
+
+    .methodological-title {
+      color: #007bff;
+    }
+
+    .topic-panel ul {
+      list-style: disc;
+      padding-left: 20px;
+    }
+
+    .topic-panel li {
+      margin-bottom: 12px;
+    }
+
+    /* Responsive: stack on mobile */
+    @media screen and (max-width: 768px) {
+      .topics-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  </head>
+<body>
+{% include header.html %}
+
+  <div class="container">
+    <div class="row" style="padding:20px">
+
+      <!-- Main content -->
+      <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1">
+
+        <!-- Call for Papers -->
+        <div class="row" style="font-size:18px">
+          <h2 id="call">Call for Papers</h2>
+          <hr>
+          <p>
+            Gen<sup>2</sup> is designed to sharply focus on domain-specific roadblocks and open challenges that must be addressed to accelerate the impact of GenAI in genomics. We welcome submissions of unpublished work and works-in-progress on a range of topics at this intersection, as listed in the <strong>"Topics of Interest"</strong> section below.   
+            </p>
+
+          <p>
+           We invite submissions through our <a href="https://openreview.net/group?id=ICLR.cc/2026/Workshop/Gen2">OpenReview portal</a> in two tracks: 
+            <ul>
+            <li><strong>Full Workshop Papers</strong> (4-8 pages), and</li>
+            <li>
+              <strong>Tiny Papers</strong> (2-4 pages),
+            </li>
+          </ul>
+           latter of which is designed to encourage the communication of early findings and lower the barrier to entry for early-career researchers.<br>
+
+           Both tracks are considered <strong>non-archival</strong> to avoid conflict with future publication. The review process is double-blind. We ask that authors strictly follow the LaTeX templates provided below and submit anonymized papers.<br>
+
+           Please review the submission instructions on this page and reach out to <a href="mailto:genai-in-genomics@googlegroups.com">genai-in-genomics@googlegroups.com</a> if you have any questions.  
+         </p>
+
+           <strong>Reciprocal Review:</strong> To ensure a fair and high-quality review process, we require that each submission nominate at least one author to review up to 3 submissions between <strong>February 3 - 20</strong> via the submission page.
+          </p>
+        </div>
+
+        <!-- Key Dates -->
+        <div class="row" style="font-size:18px">
+          <h2 id="dates">Key Dates</h2>
+          <hr>
+          <ul class="tight-list">
+            <li>Submissions open:  <strong>TBD</strong></li>
+              <!-- <strong>Sunday, 12 Jan 2026</strong></li> -->
+            <li>Submissions close: <strong>Sunday, 1 Feb 2026, 11:59PM UTC-12 </strong> (Anywhere on Earth)</li>
+            <li>Notification: <strong>Sunday, 1 March 2026, 11:59PM UTC-12</strong> (Anywhere on Earth)</li>
+            <li>Camera-ready deadline: <strong>TBD</strong></li>
+            <li>Workshop: <strong>Sunday or Monday, 26 or 27 Apr 2026</strong> (TBD)</li>
+          </ul>
+        </div>
+
+        <!-- Topics -->
+        <div class="row" style="font-size:18px">
+          <h2 id="topics">Topics of Interest</h2>
+          <hr>
+          <p>We welcome submissions covering position papers, new datasets and tasks, novel GenAI method development, and applications of existing models in genomics. Topics of interest include, but are not limited to:
+          </p>
+
+          <div class="topics-container">
+            <!-- Panel 1: Core Genomics Applications -->
+            <div class="topic-panel">
+              <h5 class="genomics-title">Core Genomics Applications of GenAI methods</h5>
+              <ul>
+                <li>
+                  <strong>Single-cell -omics:</strong>
+                  <ul>
+                    <li>Multi-omic integration,</li>
+                    <li>conditional and cross-modal generation,</li>
+                    <li>single cell trajectory simulation,</li>
+                    <li>perturbation effect modeling,</li>
+                    <li>target identification,</li>
+                    <li>virtual cell models.</li>
+                  </ul>
+                <li>
+                  <strong>Spatial transcriptomics and tissue modeling:</strong>
+                  <ul>
+                    <li>Generative models for in silico tissue reconstruction,</li>
+                    <li>cell-cell interaction modeling,</li>
+                    <li>self-supervised learning of tissue domains,</li>
+                    <li>spatial perturbation response.</li>
+                  </ul>
+                    
+                </li>
+                <li>
+                  <strong>Regulatory genomics and epigenomics:</strong>
+                  <ul>
+                    <li>Sequence-to-function deep learning models of genome regulations,</li>
+                    <li>DNA language models with multi-modality,</li>
+                    <li>design of regulatory elements for cell-type-specific activity,</li>
+                    <li>DNA and RNA sequence generation.</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>Population genomics:</strong>
+                  <ul>
+                    <li>Ancestry-aware generative models,</li>
+                    <li>rare variant simulation,</li>
+                    <li>generative modeling for variant effect prediction,</li>
+                    <li>genotype-phenotype modeling.</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Panel 2: Methodological Themes -->
+            <div class="topic-panel">
+              <h5 class="methodological-title">Methodological Themes</h5>
+              <ul>
+                <li>
+                  <strong>Adapting generative models to biological data:</strong>
+                  <ul>
+                    <li>Diffusion- and flow-based generative models,</li>
+                    <li>transformers,</li>
+                    <li>VAEs and GANs etc tailored for biological data and tasks.</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>Pretrained foundation models for genomics:</strong>
+                  <ul>
+                    <li>Large-scale self-supervised learning across multiple scales and data modalities,</li>
+                    <li>genome-scale masked modeling.</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>Latent space interpretation:</strong>
+                  <ul>
+                    <li>Interpretation of large-scale foundation models,</li>
+                    <li>enforcing disentanglement of biological factors,</li>
+                    <li>linking latent variables to known biology.</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>Data-efficient generation:</strong>
+                  <ul>
+                    <li>Techniques to generate from few-shot data or under noisy, incomplete annotations common in genomics.</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>Evaluation and benchmarks:</strong>
+                  <ul>
+                    <li>Designing suitable benchmarking tasks and evaluation criteria,</li>
+                    <li>re-evaluating existing models with robust benchmarks and metrics.</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Submission Instructions -->
+        <div class="row" style="font-size:18px">
+          <h2 id="submit">Submission Instructions</h2>
+          <hr>
+          <p>
+            All submissions will be handled on <strong>openreview.net</strong>: <a href="https://openreview.net/group?id=ICLR.cc/2026/Workshop/Gen2">submission link</a>.  
+          </p>
+          <p>We offer two submission tracks :</p>
+
+          <h3 style="margin-top:10px;">Regular Papers</h3>
+          <p>
+            Regular paper submissions may be up to <strong>8 pages</strong>, excluding Software and Data, References, and Appendix.<br>
+            Submissions that violate page limits or anonymization policies will be desk rejected.<br> 
+            Please use the LaTeX template linked here when preparing your submission:<br>
+            <a href=#>Gen<sup>2</sup> Full Workshop Paper LaTeX Template</a>
+          </p>
+
+          <h3 style="margin-top:18px;">Tiny Papers</h3>
+          <p>
+            Tiny paper submissions may be up to <strong>4 pages</strong>, excluding Software and Data, References, and Appendix. <br> 
+            Submissions that violate page limits or anonymization policies will be desk rejected.<br>
+            Please use the LaTeX template linked here when preparing your submission:<br>
+            <a href=#>Gen<sup>2</sup> Tiny Paper LaTeX Template</a>
+          </p>
+
+          <p>In line with ICLR regulations, for this track we especially encourage submissions that present:</p>
+          <ul class="tight-list">
+            <li>An implementation and evaluation of an unpublished but simple idea</li>
+            <li>A modest yet self-contained theoretical result</li>
+            <li>A follow-up experiment or re-analysis of a previously published paper</li>
+            <li>A fresh perspective on an existing publication</li>
+          </ul>
+        </div>
+
+        <!-- Originality -->
+        <div class="row" style="font-size:18px">
+          <h2 id="originality">Originality of Submission</h2>
+          <hr>
+          <p>
+            Submitted work must be original and not previously published. Submissions that have appeared on preprint servers, such as arXiv, or other non-archival workshops are permitted.
+          </p>
+        </div>
+
+        <!-- Review -->
+        <div class="row" style="font-size:18px">
+          <h2 id="review">Review Process</h2>
+          <hr>
+          <p>
+            The review process is double-blind. Please ensure your submissions are anonymized.
+          </p>
+          <p>
+            For both tracks, authors may include an unlimited number of appendix pages after the bibliography.
+            However, please keep in mind that the reviewers are not required to read the appendix. Therefore, please try to communicate your core findings and their importance in the main text. 
+          </p>
+        </div>
+
+        <!-- LLM -->
+        <div class="row" style="font-size:18px">
+          <h2 id="llm">Use of Large Language Models (LLMs)</h2>
+          <hr>
+          <p>
+            In line with ICLR regulations, the use of large language models is permitted as a general-purpose assistance tool.
+            However, if an LLM plays a significant role in research ideation and/or writing, such that it could reasonably be considered a contributor,
+            authors must disclose its use. The specific role of the LLM should be described in a dedicated <strong>LLM Usage</strong> section,
+            which may be included in the appendix and does not count toward the page limit. Failure to disclose significant LLM usage may result in desk rejection.
+          </p>
+          <p>
+            For the Tiny Paper track, in line with ICLR regulations, fully AI-generated papers are not permitted in this submission format.
+            AI assistance is allowed, but submissions must be primarily human-authored and reflect original thought and analysis.
+            Authors are encouraged to consult guidance from NYU and MIT regarding the distinction between AI-generated and AI-assisted work.
+          </p>
+        </div>
+
+        <!-- Presentation -->
+        <div class="row" style="font-size:18px">
+          <h2 id="presentation">Presentation and Publications</h2>
+          <hr>
+          <p>
+            All accepted papers will be presented as posters during the workshop. A subset of papers from the Regular Paper track will be selected
+            for spotlight oral presentations based on reviewer feedback.
+          </p>
+          <p>
+            While the workshop is non-archival, authors of accepted papers will have the option to make their paper, poster, or presentation slides available
+            through the workshop website and <a href="https://openreview.net/group?id=ICLR.cc/2026/Workshop/Gen2">the Gen<sup>2</sup> OpenReview venue.</a>
+          </p>
+          <p>
+            We will encourage presenters of accepted submissions to attend the workshop in person, while accommodating virtual attendance in cases of visa issues
+            or other exceptional circumstances. In such cases, we will coordinate in advance to collect pre-recorded presentations to broadcast during the event.
+          </p>
+        </div>
+
+        <!-- FAQ -->
+        <div class="row" style="font-size:18px">
+          <h2 id="faq">Frequently Asked Questions (FAQ)</h2>
+          <hr>
+
+          <p><strong>What does "non-archival" mean?</strong></p>
+          <p>
+            This workshop is non-archival, meaning that accepted papers will not appear in official proceedings and will not preclude future submission
+            of the same or extended work to archival conference or journal venues.
+          </p>
+
+          <p><strong>Can I submit the same work to another workshop?</strong></p>
+          <p>
+            Yes, concurrent submission of the same or related work to other venues is permitted. However, please double-check the policies of any other venues to which you are submitting.
+          </p>
+
+          <p><strong>Can I submit a work at the workshop that has already been accepted elsewhere?</strong></p>
+          <p>
+            As this workshop is non-archival, submissions of work that have been accepted but not yet formally published are permitted.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <hr>
+    <footer>
+      &nbsp;
+    </footer>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'] ],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script type="text/javascript"
+     src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  <script type="text/javascript" src="/js/main.js"></script>
+</body>
+</html>
