@@ -97,7 +97,7 @@ active_page: dates
         <div class="date-item">
           <span class="date-event"><h4><strong>Submissions open</strong></h4></span>
           <span class="date-value">
-            <span>Monday, <strong>22 Dec 2026</strong>, 00:00AM (AoE)</span>
+            <span>Monday, <strong>22 Dec 2025</strong>, 00:00AM (AoE)</span>
           </span>
         </div>
 
@@ -132,12 +132,14 @@ active_page: dates
 
         <div class="date-item">
           <span class="date-event"><h4><strong>Camera-ready deadline</strong></h4></span>
-            <span>Tuesday, <strong>10 March 2026</strong>, 11:59PM (AoE) <span class="date-note"></span></span>
+          <span class="date-value">
+            <span>Friday, <strong>10 March 2026</strong>, 11:59PM (AoE) <span class="date-note"></span></span>
+          </span>
         </div>
 
         <div class="date-item">
           <span class="date-event"><h4><strong>Workshop</strong></h4></span>
-          <span class="date-value"> Sunday / Monday, 26 or 27 Apr 2026 (TBD) <span class="date-note"></span></span>
+          <span class="date-value"> Sunday / Monday, <strong> 26 or 27 Apr 2026</strong> (TBD) <span class="date-note"></span></span>
         </div>
       </div>
     
@@ -158,9 +160,9 @@ active_page: dates
   <!-- Countdown Timer Script -->
   <script>
     function updateCountdown() {
-      // Submission deadline: Feb 1, 2026, 11:59 PM AoE (Anywhere on Earth)
-      // AoE is UTC-12, so we need to add 12 hours to get UTC time
-      const deadline = new Date('2026-02-02T11:59:00Z'); // Feb 2 at 11:59 UTC = Feb 1 at 11:59 AoE
+      // Submission deadline: Feb 7, 2026, 11:59 PM AoE (Anywhere on Earth)
+      // AoE is UTC-12. Feb 7 23:59 AoE = Feb 8 11:59 UTC
+      const deadline = new Date('2026-02-08T11:59:00Z');
       const now = new Date();
       const diff = deadline - now;
       
