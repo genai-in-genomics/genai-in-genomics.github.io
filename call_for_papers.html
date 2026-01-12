@@ -70,13 +70,23 @@ active_page: cfp
       }
     }
 
-    /* Gray box for Reciprocal Review */
+    /* Light blue box for Reciprocal Review */
     .reciprocal-review-box {
       background-color: #f0f8ff;
       padding: 20px;
       border-radius: 5px;
       margin-top: 15px;
     }
+
+    /* Light blue box w/ gray text for Tiny Paper statement */
+    .tiny-paper-box {
+      background-color: #f0f8ff;
+      padding: 20px;
+      border-radius: 5px;
+      margin-top: 15px;
+      color: #777677; /* Adds dark gray text */
+    }
+    
   </style>
 
   </head>
@@ -244,17 +254,29 @@ active_page: cfp
             <li>A follow-up experiment or re-analysis of a previously published paper</li>
             <li>A fresh perspective on an existing publication</li>
           </ul>
-          <p>
+          <!-- <p>
           <em>Since 2025, ICLR has discontinued the separate “Tiny Papers” track, and is instead requiring each workshop to accept short (2–4 pages in ICLR format, 
           exact page length to be determined by each workshop) paper submissions, with an eye towards inclusion; 
           see ​​<a href="https://iclr.cc/Conferences/2025/CallForTinyPapers">https://iclr.cc/Conferences/2025/CallForTinyPapers</a> for a history of the ICLR tiny papers initiative.
           </em>
-          </p>
+          </p> -->
           
-          <p>
-          <em> Authors of these papers, including both Regular paper and Tiny paper, will be earmarked for potential funding from ICLR, but need to submit a <strong>separate application for Financial Assistance</strong> that evaluates their eligibility. 
-          This application for Financial Assistance to attend ICLR 2026 will become available on <a href="https://iclr.cc/Conferences/2026/">https://iclr.cc/Conferences/2026/</a> at the beginning of February and close early March.</em>
+          <div class="tiny-paper-box">
+            <p><em>Since 2025, ICLR has discontinued the separate “Tiny Papers” track, and is instead requiring each workshop to accept short (2–4 pages in ICLR format, 
+          exact page length to be determined by each workshop) paper submissions, with an eye towards inclusion; 
+          see ​​<a href="https://iclr.cc/Conferences/2025/CallForTinyPapers">https://iclr.cc/Conferences/2025/CallForTinyPapers</a> for a history of the ICLR tiny papers initiative.</em></p>
+          </div>
+          
+          <div class="reciprocal-review-box">
+            <p>
+          <em> <strong>Travel Funding:</strong> Authors of  papers from both the Regular Workshop Paper Track and the Tiny Paper Track, will be earmarked for potential funding from ICLR, but need to submit a <strong>separate application for Financial Assistance</strong> that evaluates their eligibility. 
+          This application for Financial Assistance to attend ICLR 2026 will become available on <a href="https://iclr.cc/Conferences/2026/">https://iclr.cc/Conferences/2026/</a> in early February and close early March.</em>
           </p>
+          </div>
+          
+
+          
+          
         </div>
 
         <!-- Originality -->
