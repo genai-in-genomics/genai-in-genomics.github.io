@@ -103,7 +103,7 @@ active_page: dates
         <div class="date-item">
           <span class="date-event"><h4><strong>Submissions close</strong></h4></span>
           <span class="date-value">
-            <span>Saturday, <strong>7 Feb 2026</strong>, 11:59PM (AoE) <span class="date-note"></span></span>
+            <span>Sunday, <del>7 Feb</del> <strong>8 Feb 2026</strong>, 11:59PM (AoE) <span class="date-note"></span></span>
             <span class="countdown" id="submission-countdown">Loading...</span>
           </span>
         </div>
@@ -111,7 +111,7 @@ active_page: dates
         <div class="date-item">
           <span class="date-event"><h4><strong>Reviewer sign-up deadline</strong></h4></span>
           <span class="date-value">
-            <span>Saturday, <strong>7 Feb 2026</strong>, 11:59PM (AoE)</span>
+            <span>Sunday, <del>7 Feb</del> <strong>8 Feb 2026</strong>, 11:59PM (AoE)</span>
           </span>
         </div>
 
@@ -157,11 +157,11 @@ active_page: dates
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
   
   <!-- Countdown Timer Script -->
-  <script>
+<script>
     function updateCountdown() {
-      // Submission deadline: Feb 7, 2026, 11:59 PM AoE (Anywhere on Earth)
-      // AoE is UTC-12. Feb 7 23:59 AoE = Feb 8 11:59 UTC
-      const deadline = new Date('2026-02-08T11:59:00Z');
+      // Submission deadline: Feb 8, 2026, 11:59 PM AoE (Anywhere on Earth)
+      // AoE is UTC-12. Feb 8 23:59 AoE = Feb 9 11:59 UTC
+      const deadline = new Date('2026-02-09T11:59:00Z'); // Changed from 08 to 09
       const now = new Date();
       const diff = deadline - now;
       
