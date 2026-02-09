@@ -103,7 +103,7 @@ active_page: dates
         <div class="date-item">
           <span class="date-event"><h4><strong>Paper submissions close</strong></h4></span>
           <span class="date-value">
-            <span><del>Saturday, 7 Feb</del>  Monday, <strong>9 Feb 2026</strong>, 11:59PM (AoE) <span class="date-note"></span></span>
+            <span><del>Saturday, 7 Feb</del>  Tuesday, <strong>10 Feb 2026</strong>, 11:59PM (AoE) <span class="date-note"></span></span>
             <span class="countdown" id="submission-countdown">Loading...</span>
           </span>
         </div>
@@ -160,8 +160,8 @@ active_page: dates
 <script>
     function updateCountdown() {
       // Submission deadline: Feb 8, 2026, 11:59 PM AoE (Anywhere on Earth)
-      // AoE is UTC-12. Feb 9 23:59 AoE = Feb 10 11:59 UTC
-      const deadline = new Date('2026-02-10T11:59:00Z');
+      // AoE is UTC-12. Feb 10 23:59 AoE = Feb 11 11:59 UTC
+      const deadline = new Date('2026-02-11T11:59:00Z');
       const now = new Date();
       const diff = deadline - now;
       
